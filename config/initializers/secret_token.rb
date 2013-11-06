@@ -4,4 +4,7 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Ideacards::Application.config.secret_token = '79b7adc3077c004edf730477f4ace38d4a9ba32e17d243d68d25e2f2fa61b6c0e5410b4ed107485bd404a24f26850e04b9dfd75016adec7878da8240ffbf84dc'
+Ideacards::Application.config.secret_token = 'a6cd68af2c0c93e2f0bd4c576aab509f59b7ae8'+
+  '39d02018caa4c8ce3cc46ea012fdc4f1dc93bbb14137bc646fb697907e9649260d02b77eed838717d20dff479'
+Ideacards::Application.config.secret_key_base = '018caa4c8ce3cc46ea012fdc4f1dc93bbb14137bc6'+
+  '46fb697907e9649260d02b77eed838717d20dff479' # this needs to be added
