@@ -7,8 +7,8 @@ default_run_options[:pty] = true
 
 set :copy_exclude,  [".svn", ".DS_Store", 'cache']
 set :keep_releases, 5
-set :application,   "Visualform"
-set :user,          'deployer'
+set :application,   "ideacards"
+set :user,          'karol'
 set :repository,    "git@github.com:karol-zygmunt-blaszczyk/ideacards.git"
 set :scm,           'git'
 set :branch,        'master'
