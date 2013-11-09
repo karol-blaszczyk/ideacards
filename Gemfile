@@ -37,8 +37,6 @@ gem 'capistrano', '2.15.5'
 
 group :production do
   gem 'pg'
-#  gem 'activerecord-mysql2-adapter'
-  gem 'activerecord-mysql-adapter'
 end
 
 # Gems used only for assets and not required
