@@ -15,6 +15,7 @@
 //= require ckeditor/init
 //= require_tree ./renata
 //= require ./bot-file-up
+//= require ./select
 
 
 /* Menu Slide JS  */
@@ -68,7 +69,7 @@ var api;
   jQuery(document).ready(function() {
      api =  jQuery('.banner').revolution(
             {
-              delay: 7000,
+              delay: 700,
               
               startheight:650,
               
@@ -109,8 +110,8 @@ $('#carousel_container').carouFredSel({
    direction: 'right',
   scroll: {
       items: 4,
-      delay: 2000,
-      duration: 1000
+      delay: 200,
+      duration: 100
    },
    prev : {
       button  : "#car_prev",

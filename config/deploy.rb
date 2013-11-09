@@ -66,9 +66,9 @@ namespace :application do
 
   desc 'Clean all assets under tmp/cache and precompiles all the assets'
   task :assets do
-    #run "rm -rf #{latest_release}/public/assets"
+    run "rm -rf #{latest_release}/public/assets"
     run "cd #{latest_release} && RAILS_ENV=#{rails_env} bundle exec rake assets:precompile"
-    run "cd #{latest_release} && RAILS_ENV=#{rails_env} bundle exec rake visualform:assets"
+    run "cd #{latest_release} && RAILS_ENV=#{rails_env} bundle exec rake ideacards:assets"
   end
 
   desc 'Migrates the database'

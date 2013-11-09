@@ -31,7 +31,11 @@ class ApplicationController < ActionController::Base
   #   @element = build_resource(Menu, :menu, :find_by_name!)
   def build_resource(klass, attr = :attr, find_method = :find)
     if params[:id]
-      klass.send(find_method, params[:id])
+      begin
+        klass.send(find_method, params[:id])
+      rescue 
+        klass.friendly.find(params[:id])
+      end
     else
       klass.new(params[attr])
     end

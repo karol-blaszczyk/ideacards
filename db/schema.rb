@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131109125500) do
+ActiveRecord::Schema.define(version: 20131109151448) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -43,9 +43,9 @@ ActiveRecord::Schema.define(version: 20131109125500) do
     t.string   "name"
     t.string   "description"
     t.integer  "category_id"
-    t.integer  "time"
+    t.string   "time"
     t.integer  "social_category_id"
-    t.integer  "cash"
+    t.string   "cash"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "picture_file_name"
@@ -53,6 +53,8 @@ ActiveRecord::Schema.define(version: 20131109125500) do
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
     t.string   "slug"
+    t.string   "placement"
+    t.string   "group_type"
   end
 
   add_index "ideas", ["category_id"], name: "index_ideas_on_category_id"
@@ -69,19 +71,6 @@ ActiveRecord::Schema.define(version: 20131109125500) do
 
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], name: "index_roles_on_name"
-
-  create_table "social_categories", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "picture_file_name"
-    t.string   "picture_content_type"
-    t.integer  "picture_file_size"
-    t.datetime "picture_updated_at"
-    t.string   "slug"
-  end
-
-  add_index "social_categories", ["slug"], name: "index_social_categories_on_slug", unique: true
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

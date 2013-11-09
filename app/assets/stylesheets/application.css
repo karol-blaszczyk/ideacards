@@ -12,4 +12,5 @@
  *= require_tree ./renata
  *= require font-awesome
   *= require ./file_upload
+   *= require ./select
  */

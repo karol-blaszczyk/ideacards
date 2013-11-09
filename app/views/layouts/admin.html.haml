@@ -38,13 +38,11 @@
         .collapse.navbar-collapse.navbar-ex1-collapse
           %ul.nav.navbar-nav
             %li
+              = link_to 'Użytkownicy', admin_users_path
+            %li
               = link_to 'Pomysły', admin_ideas_path
             %li
               = link_to 'Kategorie', admin_categories_path
-            %li
-              = link_to 'Grupy', admin_social_categories_path
-
-
     .container
       .row
         = render 'layouts/shared/messages'
