@@ -11,7 +11,7 @@ class IdeasController < ApplicationController
 	def search
 	  # filter"=>{"placement"=>"", "cash"=>"", "group"=>"", "time"=>"< 30min"}
 	  filters = params[:filter]
-
+	  
 	  ideas = Idea.all
 	  ideas = ideas.where("placement LIKE ?" , filters[:placement]) unless filters[:placement].empty?
 	  ideas = ideas.where("cash LIKE ?" , filters[:cash]) unless filters[:cash].empty?
