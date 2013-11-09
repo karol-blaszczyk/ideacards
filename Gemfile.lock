@@ -91,6 +91,8 @@ GEM
     execjs (2.0.2)
     font-awesome-rails (4.0.3.0)
       railties (>= 3.2, < 5.0)
+    friendly_id (5.0.1)
+      activerecord (~> 4.0.0)
     haml (4.0.4)
       tilt
     highline (1.6.20)
@@ -224,6 +226,7 @@ DEPENDENCIES
   debugger (~> 1.6.0)
   devise (>= 2.2.3)
   font-awesome-rails
+  friendly_id (~> 5.0.0)
   haml (~> 4.0.2)
   jquery-migrate-rails
   jquery-rails

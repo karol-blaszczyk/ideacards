@@ -1,0 +1,17 @@
+%h3 Grupy
+.widget
+  %table.table.table-condensed
+    %thead
+      %tr
+        %th Nazwa
+        %th Obrazek
+        %th
+    %tbody
+      - @social_categories.each do |category|
+        %tr
+          %td= link_to category.name, admin_category_path(category)
+          %td= image_tag category.picture.url(:thumb), :class => "img-rounded", :style => "max-width: 100px;"
+
+          %td= link_to("Usuń", admin_social_category_path(category), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini')
+    
+    = link_to 'Dodaj Kategorię', new_admin_social_category_path, :class => "btn btn-primary"

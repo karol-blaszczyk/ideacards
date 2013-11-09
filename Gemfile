@@ -6,7 +6,7 @@ gem 'rails', '4.0.0'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'thin'   # webserver gem
 gem 'yaml_db'
-
+gem 'friendly_id', '~> 5.0.0' 
 gem 'jquery-rails'
 gem 'jquery-migrate-rails'
 gem 'jquery-ui-rails'

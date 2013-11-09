@@ -329,7 +329,7 @@ fotm textarea{
 	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 	padding: 8px 0;
 	width: 100%;
-	position: absolute;
+	position: relative;
 	z-index: 1000;
 }
 
@@ -2227,7 +2227,6 @@ div.ppt {
 
 
 .footer{
-	margin-top: 40px;
 	padding: 0 30px 30px 30px;
 	background: #000 url('/assets/stressed_linen.png') repeat;
 }

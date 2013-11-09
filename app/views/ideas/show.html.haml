@@ -1,0 +1,19 @@
+.hero
+  .container
+    .hero-inner
+      .hero-head.text-center
+        / Hero heading
+        %h1.head-h
+          %strong= @idea.name
+      .row
+        .col-md-6.col-sm-6
+          / Hero head paragraph
+          %p.text-right
+            %img.img-responsive{alt: "", src: "#{@idea.picture.url(:medium)}"}/
+          .hero-btn
+            = @idea.category.name
+        .col-md-6.col-sm-6
+          = @idea.description.html_safe
+          .hero-btn
+            %a.btn.btn-info{href: "#"} Read More..
+    %hr/

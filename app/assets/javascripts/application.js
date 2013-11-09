@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require ckeditor/init
 //= require_tree ./renata
+//= require ./bot-file-up
 
 
 /* Menu Slide JS  */

@@ -1,0 +1,16 @@
+%h3 Użytkownicy
+.widget
+  %table.table.table-condensed
+    %thead
+      %tr
+        %th Użytkownik
+        %th Email
+        %th Dołaczył
+        %th
+    %tbody
+      - @users.each do |user|
+        %tr
+          %td= link_to user.name, admin_user_path(user)
+          %td= user.email
+          %td= user.created_at.to_date      
+          %td= link_to("Usuń", admin_user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') unless user == current_user

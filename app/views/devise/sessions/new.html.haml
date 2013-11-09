@@ -1,0 +1,13 @@
+.row
+  .container.padded
+    .col-lg-6.col-lg-offset-3
+      %h2 Zaloguj
+      .well
+        = simple_form_for(resource, as: resource_name, url: session_path(resource_name) , wrapper: :bootstrap, :class => "form-horizontal") do |f|
+
+          = f.input :email, :autofocus => true, label: 'Email', placeholder: 'Email'
+          = f.input :password, label: 'Hasło', placeholder: 'Hasło'
+          = f.input :remember_me, label: "Zapamiętaj mnie", :as => :boolean, :wrapper => :checkbox
+          = f.button :submit, "Zaloguj", :class => 'btn btn-primary btn-block'
+        = render "devise/shared/links"
+      / 

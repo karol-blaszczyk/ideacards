@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  description: MyString
+  category_id: 
+  time: 1
+  social_category_id: 
+  cash: 1
+
+two:
+  name: MyString
+  description: MyString
+  category_id: 
+  time: 1
+  social_category_id: 
+  cash: 1

@@ -1,0 +1,124 @@
+.header
+  .container
+    / Navigation Menu Start
+    .navigation
+      .row
+        / Navigation Menu Link Lists
+        - if user_signed_in?
+          .col-md-2.col-sm-4.col-xs-6
+            .menu
+              %span.br-green
+                %i.fa.fa-desktop
+                \  Menu
+              .menu-list
+                %ul
+                  %li
+                    = link_to ideas_path do
+                      %i.fa.fa-gear.red
+                      Pomysły
+                  %li
+                    = link_to  edit_user_registration_path do
+                      %i.fa.fa-check-square-o.lblue
+                      Edytuj Konto
+                  %li
+                    = link_to destroy_user_session_path, method: :delete do
+                      %i.fa.fa-user.pink
+                      Wyloguj
+        - else
+          .col-md-2.col-sm-4.col-xs-6
+            .menu
+              %span.br-lblue
+                %i.fa.fa-desktop
+                \  Menu Column
+              .menu-list
+                %ul
+                  %li
+                    = link_to ideas_path do
+                      %i.fa.fa-gear.red
+                      Pomysły
+                  %li
+                    = link_to new_user_session_path do
+                      %i.fa.fa-check-square-o.lblue
+                      Zaloguj
+                  %li
+                    = link_to new_user_registration_path do
+                      %i.fa.fa-user.pink
+                      Zarejestruj
+        - if user_signed_in?
+          - if current_user.has_role? :admin
+            .col-md-2.col-sm-4.col-xs-6
+              .menu
+                %span.br-green
+                  %i.fa.fa-desktop
+                  \  ADMIN
+                .menu-list
+                  %ul
+                    %li{:class => "tip ", :'data-placement' => 'bottom', :title=>"Zarządzaj"}
+                      = link_to admin_users_path do
+                        Zarządzaj
+        / .col-md-2.col-sm-4.col-xs-6
+        /   .menu
+        /     %span.br-red
+        /       %i.fa.fa-desktop
+        /       \  Menu Column
+        /     .menu-list
+        /       %ul
+        /         %li
+        /           %a{href: "products.html"}
+        /             %i.fa.fa-puzzle-piece.pink
+        /             Products
+        /         %li
+        /           %a{href: "contact.html"}
+        /             %i.fa.fa-phone.orange
+        /             Contact Us
+        /         %li
+        /           %a{href: "login.html"}
+        /             %i.fa.fa-sign-in.green
+        /             Login / Register
+        /         %li
+        /           %a{href: "error.html"}
+        /             %i.fa.fa-question.blue
+        /             404 Error Page
+        / .col-md-2.col-sm-4.col-xs-6
+        /   .menu
+        /     %span.br-orange
+        /       %i.fa.fa-desktop
+        /       \  Menu Column
+        /     .menu-list
+        /       %ul
+        /         %li
+        /           %a{href: "faq.html"}
+        /             %i.fa.fa-question.red
+        /             FAQ
+        /         %li
+        /           %a{href: "careers.html"}
+        /             %i.fa.fa-briefcase.lblue
+        /             Careers
+        /         %li
+        /           %a{href: "testimonials.html"}
+        /             %i.fa.fa-group.pink
+        /             Testimonials
+        /         %li
+        /           %a{href: "support.html"}
+        /             %i.fa.fa-envelope.orange
+        /             Support
+        / .col-md-4.col-sm-4.hidden-xs
+        /   .sform.br-white
+        /     %span
+        /       %i.icon-envelope.lblue
+        /       Subscription
+        /     .form
+        /       %form{role: "form"}
+        /         .form-group
+        /           %input.form-control{placeholder: "Enter your Name", type: "text"}/
+        /           %input.form-control{placeholder: "Enter your E-mail", type: "email"}/
+        /           %button.btn.btn-info.btn-sm{type: "button"} Subscribe
+        /           %button.btn.btn-default.btn-sm{type: "button"} Reset
+
+
+  / Navigation menu end
+/ Navigation Menu Button
+.menu-btn
+  %a{href: "#"}
+    Menu
+    %i.fa.fa-chevron-down

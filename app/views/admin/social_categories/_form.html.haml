@@ -1,0 +1,24 @@
+.container
+  %h4 Dodaj Grupę "dla kogo"
+  %p.small * Pola oznaczone gwiazdką sa obowiązkowe
+  = simple_form_for social_category, {:html => { id: "new_social_category_form", class: 'form-vertical' }}.merge(args) do |f|
+    %h5.error= f.error_notification
+    .row
+      =f.input :name,  label: "Nazwa grupy", placeholder: "wpisz..."
+
+      = f.input :picture, :label => 'Dodaj obrazek' do
+        .fileupload.fileupload-new.well.pull-left{"data-provides" => "fileupload"}
+          .fileupload-new.thumbnail{style: "width: 150px; height: 150px;"}
+            %img{src: "#{image(social_category)}"}/
+          .fileupload-preview.fileupload-exists.thumbnail{style: "width: 150px; height: 150px;"}
+          %span.btn.btn-file.btn-primary
+            %span.fileupload-new Wybierz
+            %span.fileupload-picture Zmień
+            = f.file_field :picture
+          %a.btn.btn-danger.fileupload-exists{"data-dismiss" => "fileupload", href: "#"} x 
+      %br
+      = f.button :submit, social_category.persisted? ? :'Uaktualnij' : :'Dodaj', :class => "btn btn-primary"
+      -# = link_to :'Wróć', back_path, :class => "btn btn-default " if back_path
+
+
+

@@ -1,0 +1,40 @@
+.container
+  %h4 Dodaj Pomysł
+  %p.small * Pola oznaczone gwiazdką sa obowiązkowe
+  = simple_form_for idea, {:html => { id: "new_idea_form", class: 'form-vertical' }}.merge(args) do |f|
+    %h5.error= f.error_notification
+    .row
+      .col-sm-3.col-3.col-lg-3 
+        %p.title Wybierz kategorię
+        = f.association :category, required: true, label: false, prompt: 'WYBIERZ', input_html: {class: :send_on_change}
+
+        = f.input :time, label: 'Czas'
+        = f.input :cash, label: 'Koszt'
+
+        = f.select :social_category_id, SocialCategory.all, required: true, label: false, prompt: 'WYBIERZ', input_html: {class: :send_on_change}
+
+
+        / = f.input :tag_list, label: "Tagi", placeholder: "wpisz tagi oddzielając je przecinkiem", input_html: {class: "tm-input"}
+       
+      .col-sm-9.col-9.col-lg-9
+        =f.input :name,  label: "Nazwa Pomysłu", placeholder: "wpisz..."
+
+        = f.input :picture, :label => 'Dodaj obrazek' do
+          .fileupload.fileupload-new.well.pull-left{"data-provides" => "fileupload"}
+            .fileupload-new.thumbnail{style: "width: 150px; height: 150px;"}
+              %img{src: "#{image(idea)}"}/
+            .fileupload-preview.fileupload-exists.thumbnail{style: "width: 150px; height: 150px;"}
+            %span.btn.btn-file.btn-primary
+              %span.fileupload-new Wybierz
+              %span.fileupload-picture Zmień
+              = f.file_field :picture
+            %a.btn.btn-danger.fileupload-exists{"data-dismiss" => "fileupload", href: "#"} x 
+        %div{:style => "clear: both;"}
+          =f.input :description, as: :ckeditor, input_html: { :ckeditor => {:toolbar => 'Pure'} },  label: false, placeholder: "Opis firmy"
+        %br
+        %br
+        = f.button :submit, idea.persisted? ? :'Uaktualnij' : :'Dodaj', :class => "btn btn-primary"
+        -# = link_to :'Wróć', back_path, :class => "btn btn-default " if back_path
+
+
+

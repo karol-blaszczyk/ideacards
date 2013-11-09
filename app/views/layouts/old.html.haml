@@ -1,0 +1,401 @@
+!!!
+%html
+  %head
+    / Title here
+    %title IDEACARDS
+    / Description, Keywords and Author
+    %meta{content: "Your description", name: "description"}/
+    %meta{content: "Your,Keywords", name: "keywords"}/
+    %meta{content: "ResponsiveWebInc", name: "author"}/
+    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
+    %link{href: "http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic", rel: "stylesheet", type: "text/css"}/
+    %link{href: "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,700", rel: "stylesheet", type: "text/css"}/
+    = stylesheet_link_tag "application"
+    = csrf_meta_tags
+    = javascript_include_tag "application"
+
+    / Favicon
+    %link{href: "#", rel: "shortcut icon"}/
+  %body
+    / Header Bar Start
+    = render 'layouts/partials/nav'
+    / Head Start
+    .head
+      .container
+        .row
+          .col-md-3.col-sm-4
+            / Logo and Head Text
+            .logo
+              / Logo Icon and Heading
+              = image_tag "logo.png", class: "img-responsive"
+              %span
+                =link_to root_path do
+                  Ideacards
+          .col-md-3.col-sm-4
+            / Social Icon Menu
+            .social
+              %a.facebook{href: "#"}
+                %i.fa.fa-facebook
+              %a.twitter{href: "#"}
+                %i.fa.fa-twitter
+              %a.google-plus{href: "#"}
+                %i.fa.fa-google-plus
+          .col-md-3.col-sm-4
+            / .search
+            /   %form
+            /     .input-group
+            /       %input.form-control{placeholder: "Text to search", type: "text"}/
+            /       %span.input-group-btn
+            /         %button.btn.btn-danger{type: "button"}
+            /           %i.fa.fa-search
+          .col-md-3.hidden-sm
+    = yield
+    / Start Hero
+    .hero
+      .container
+        .hero-inner
+          .hero-head.text-center
+            / Hero heading
+            %h1.head-h
+              %strong Tempo Ribus
+              autem quibusdam etaut
+          .row
+            .col-md-6.col-sm-6
+              / Hero head paragraph
+              %p.text-right
+                Et harum quidem rerum
+                %span.orange facilis
+                est et expedita distinctio.
+                %span.lblue Nam libero
+                tempore, cum soluta nobis est eligendi optio
+                %span.green cumque nihil
+                impedit quoid quod maxime  facere possimus.
+              .hero-btn
+                %a.btn.btn-info.right{href: "#"} Read More..
+            .col-md-6.col-sm-6
+              %p
+                Omnis voluptas assumenda est, omnis dolor
+                = succeed "." do
+                  %span.orange repellendus
+                %span.lblue officiis
+                debitis aut rerum
+                %span.green necessitatibus
+                saepe eveniet ut et  rsdi recusandae.
+              .hero-btn
+                %a.btn.btn-info{href: "#"} Read More..
+        %hr/
+    / Hero End
+
+    / CTA End
+    / Home Tabs Start
+    .htab
+      .container
+        / Nav Bar Tab
+        .nav-tab
+          / Nab Bar Tan Menu list
+          %ul#mytab.nav.nav-tabs.nav-justified
+            %li.active
+              %a{"data-toggle" => "tab", href: "#one"}
+                %i.fa.fa-gift.lblue
+                Feature
+            %li
+              %a{"data-toggle" => "tab", href: "#two"}
+                %i.fa.fa-laptop.red
+                Testimonial
+            %li
+              %a{"data-toggle" => "tab", href: "#three"}
+                %i.fa.fa-user.green
+                Events
+            %li
+              %a{"data-toggle" => "tab", href: "#four"}
+                %i.fa.fa-gear.orange
+                Service
+          / Content for each menu item
+          .tab-content
+            / First Content for Nav bar
+            #one.tab-pane.fade.in.active
+              / Content Heading
+              %h2
+                %span Feature
+              .row
+                .col-md-8.col-sm-8
+                  .ctext-one
+                    %h3 Renounce righteousn and dislike men
+                    %p Rtehen our power of choice is untramstem, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is png able.
+                    / Element for first content area
+                    .cicon-one
+                      %a.br-orange{href: "#"}
+                        %i.fa.fa-leaf
+                      %a.br-green{href: "#"}
+                        %i.fa.fa-pencil
+                      %a.br-red{href: "#"}
+                        %i.fa.fa-shield
+                      %a.br-lblue{href: "#"}
+                        %i.fa.fa-trophy
+                      %a.br-orange{href: "#"}
+                        %i.fa.fa-home
+                      %a.br-green{href: "#"}
+                        %i.fa.fa-desktop
+                    %p Krewhen our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided circumstances and owing to the claims of duty or the obligations of business.
+                .col-md-4.col-sm-4
+                  .ctext-one
+                    %h4 Rteousn Dislike
+                    .ctext-item
+                      %i.fa.fa-check-square-o.lblue
+                      %span Choice is untra mmelled.
+                    .ctext-item
+                      %i.fa.fa-check-square-o.lblue
+                      %span Shrinking form and pain.
+                    .ctext-item
+                      %i.fa.fa-check-square-o.lblue
+                      %span Nobisest eligendi optcumque hinrd.
+                    .ctext-item
+                      %i.fa.fa-check-square-o.lblue
+                      %span Nam libero tem cum soluta.
+                    .ctext-item
+                      %i.fa.fa-check-square-o.lblue
+                      %span Maiores alias consestqdut.
+                    .ctext-item
+                      %i.fa.fa-check-square-o.lblue
+                      %span Taque earum rerumhic tenetur.
+                    .ctext-item
+                      %i.fa.fa-check-square-o.lblue
+                      %span Nobisest eligendi optcumque hinrd.
+            / Second Content for Nav bar
+            #two.tab-pane.fade
+              %h2
+                %span Testimonial
+              .row
+                .col-md-6.col-sm-6
+                  %a{href: "#"}
+                    %i.fa.fa-unlink.cicon-two.br-red
+                  .ctext-two
+                    %h3
+                      %a{href: "#"} Excepturi Sintaeca
+                    %p Harum quidem rerum facilis est et expedita distinctio. Nam libe tempore, cum soluta nobis est eligendi optio cumque nceat facere posecessitatibus sae eveniet.
+                .col-md-6.col-sm-6
+                  %a{href: "#"}
+                    %i.fa.fa-laptop.cicon-two.br-green
+                  .ctext-two
+                    %h3
+                      %a{href: "#"} Painsto Voiworse
+                    %p Parum quidem rerum facilis est et expedita distinctio. Nam libe tempore, cum soluta nobis est eligendi optio cumque nceat facere possimus mnis volu repellen.
+              .row
+                .col-md-6.col-sm-6
+                  %a{href: "#"}
+                    %i.fa.fa-microphone.cicon-two.br-lblue
+                  .ctext-two
+                    %h3
+                      %a{href: "#"} Uesintet Pmolest
+                    %p Carum quidem rerum facilis est et expedita distinctio. Nam libe tempore, cum soluta nobis est eligendi optio cumque nceat facere possimus mnis volu repell.
+                .col-md-6.col-sm-6
+                  %a{href: "#"}
+                    %i.fa.fa-unlock-o.cicon-two.br-orange
+                  .ctext-two
+                    %h3
+                      %a{href: "#"} Tatibus Saevenie
+                    %p Larum quidem rerum facilis est et expedita distinctio. Nam libe tempore, cum soluta nobis est eligendi optio cumque nceat facere possimus mnis volu repellendus.
+            / Third Content for Nav bar
+            #three.tab-pane.fade
+              %h2
+                %span Events
+              .row
+                .col-md-4.col-sm-4
+                  .c-item
+                    %a.cicon-three{href: "#"}
+                      %i.fa.fa-laptop.br-lblue
+                      %h4 Pnceat Facere
+                    %p Gonse quuntur magni dolores eos qui ratio ne volu ptm cor poris sus cipit labatione volu sequor ioatem quam porro.
+                .col-md-4.col-sm-4
+                  .c-item
+                    %a.cicon-three{href: "#"}
+                      %i.fa.fa-leaf.br-lblue
+                      %h4 Ventorc Taevita
+                    %p Gonse quuntur magni dolores eos qui ratio ne vol upt mcorp oris sus cipit labatione volu ioatem umquam porro.
+                .col-md-4.col-sm-4
+                  .c-item
+                    %a.cicon-three{href: "#"}
+                      %i.fa.fa-gear.br-lblue
+                      %h4 Beatae Vita
+                    %p Gonse quuntur magni dolores eos qui rati one volu ptm corpo ris sus cipit labatione volu pt ioatem numquam porro.
+              .row
+                .col-md-4.col-sm-4
+                  .c-item
+                    %a.cicon-three{href: "#"}
+                      %i.fa.fa-adn.br-lblue
+                      %h4 Quasiarc Hitecto
+                    %p Gonse quuntur magni dolores eos qui ratio ne volu ptm cor poris sus cipit labatione volu ptar ioatem quam porro.
+                .col-md-4.col-sm-4
+                  .c-item
+                    %a.cicon-three{href: "#"}
+                      %i.fa.fa-linux.br-lblue
+                      %h4 Ctobea Erjtata
+                    %p Gonse quuntur magni dolores eos qui ratio ne vol upt mcorp oris sus cipit labatione volu ptaioatem umquam porro.
+                .col-md-4.col-sm-4
+                  .c-item
+                    %a.cicon-three{href: "#"}
+                      %i.fa.fa-renren.br-lblue
+                      %h4 Atiseuasi Srchite
+                    %p Gonse quuntur magni dolores eos qui rati one volu ptm corpo ris sus cipit labatione vouor ioatem numquam porro.
+            / Fourth Content for Nav bar
+            #four.tab-pane.fade
+              %h2
+                %span Service
+              .row
+                .col-md-4.col-sm-4
+                  .c-item-four
+                    %a{href: "#"}
+                      %i.fa.fa-desktop.lblue
+                    %h3
+                      %a{href: "#"} Jerspic Oiatisde
+                    %p Consequun tur magni dolores eos qui ratione volupt atem sequi nesciunt.
+                .col-md-4.col-sm-4
+                  .c-item-four
+                    %a{href: "#"}
+                      %i.fa.fa-unlink.lblue
+                    %h3
+                      %a{href: "#"} Variover Siemcid
+                    %p Consequun tur magni dolores eos qui ratione volupt atem sequi nesciunt.
+                .col-md-4.col-sm-4
+                  .c-item-four
+                    %a{href: "#"}
+                      %i.fa.fa-laptop.lblue
+                    %h3
+                      %a{href: "#"} Shavevo Lvedver
+                    %p Consequun tur magni dolores eos qui ratione volupt atem sequi nesciunt.
+              .row
+                .col-md-4.col-sm-4
+                  .c-item-four
+                    %a{href: "#"}
+                      %i.fa.fa-gear.lblue
+                    %h3
+                      %a{href: "#"} Kthcr Hetimes
+                    %p Consequun tur magni dolores eos qui ratione volupt atem sequi nesciunt.
+                .col-md-4.col-sm-4
+                  .c-item-four
+                    %a{href: "#"}
+                      %i.fa.fa-home.lblue
+                    %h3
+                      %a{href: "#"} Ujeby Cididde
+                    %p Consequun tur magni dolores eos qui ratione volupt atem sequi nesciunt.
+                .col-md-4.col-sm-4
+                  .c-item-four
+                    %a{href: "#"}
+                      %i.fa.fa-group.lblue
+                    %h3
+                      %a{href: "#"} Geduit Asopid
+                    %p Consequun tur magni dolores eos qui ratione volupt atem sequi nesciunt.
+    / Home Tabs End
+
+    / Service Start
+    .service
+      .container
+        / Service Heading
+        .block
+          %h2.heading
+            %i.fa.fa-gear.lblue
+            Service
+          %span.para eiusmod inidunt volv the years.
+        .row
+          .col-md-4.col-sm-4
+            / Service Item Block
+            .service-item
+              / Service Item Image
+              %img.img-responsive{alt: "", src: "assets/ser1.jpg"}/
+              .item-text
+                / Item Heading and paragraph
+                %h3
+                  %a{href: "#"} Classical Litere
+                %p Lorem Ipsum cosections discred enerator shose intereon the table source will uncover many web sites still in their infancy.
+          .col-md-4.col-sm-4
+            .service-item
+              %img.img-responsive{alt: "", src: "assets/ser2.jpg"}/
+              .item-text
+                %h3
+                  %a{href: "#"} Bonorum Malet
+                %p The standard chunk of Lorem Ipsum used since the 1500s is reproduced bicero are also rep rodu elow for those inter ested.
+          .col-md-4.col-sm-4
+            .service-item
+              %img.img-responsive{alt: "", src: "assets/ser3.jpg"}/
+              .item-text
+                %h3
+                  %a{href: "#"} Eertation Ullamco
+                %p Sed quia non num quam eius modi tempora incidunt utced bicero labore etnem ullam corporis sriost aliquid exrat voluptatem.
+        %hr/
+    / Service End
+    / Testimonial Start
+    .testimonial
+      .container
+        / Testimonial Heading
+        .block
+          %h2.heading
+            %i.fa.fa-group.red
+            Tesimonial
+          %span.para nidu ntvolv theiusmod iears.
+        .row
+          .col-md-4.col-sm-4
+            / testimonial content
+            .testimonial-content.t-one.animated
+              / User's image , name and designation
+              %h4
+                %img.img-responsive.img-circle{alt: "user-xs", src: "assets/user-xs.jpg"}>/
+                H. Rackham
+                %span , Atr Director
+              / User's comment
+              %blockquote.br-orange
+                %p Sed ut perspiciatis unde omnis iste natust error sit vol accusantium doloremque and laudantium, totam rem aperiam, eaque an ipsa quae abe illo explicabo. An oiuk nesciunt.
+          .col-md-4.col-sm-4
+            / testimonial content
+            .testimonial-content.t-two.animated
+              / User's image , name and designation
+              %h4
+                %img.img-responsive.img-circle{alt: "user-xs", src: "assets/user-xs.jpg"}>/
+                Bum Malorum
+                %span , M. D.
+              / User's comment
+              %blockquote.br-lblue
+                %p Sed ut perspiciatis unde omnis iste natust error sit vol accusantium doloremque and laudantium, totam rem aperiam, eaque an ipsa quae abe illo explicabo. An oiuk nesciunt.
+          .col-md-4.col-sm-4
+            / testimonial content
+            .testimonial-content.t-three.animated
+              / User's image , name and designation
+              %h4
+                %img.img-responsive.img-circle{alt: "user-xs", src: "assets/user-xs.jpg"}>/
+                Jhonm Eloruk
+                %span , Manager
+              / User's comment
+              %blockquote.br-green
+                %p Sed ut perspiciatis unde omnis iste natust error sit vol accusantium doloremque and laudantium, totam rem aperiam, eaque an ipsa quae abe illo explicabo. An oiuk nesciunt.
+    / Testimonial End
+    / Sponsor Start
+    .sponsor
+      .container
+        .row
+          .col-md-12
+            .sponsor-item
+              %a{href: "#"}
+                %img.img-responsive{alt: "", src: "assets/sponsor/amazon.png"}/
+              %a{href: "#"}
+                %img.img-responsive{alt: "", src: "assets/sponsor/facebook.png"}/
+              %a{href: "#"}
+                %img.img-responsive{alt: "", src: "assets/sponsor/google.png"}/
+              %a{href: "#"}
+                %img.img-responsive{alt: "", src: "assets/sponsor/skype.png"}/
+              %a{href: "#"}
+                %img.img-responsive{alt: "", src: "assets/sponsor/twitter.png"}/
+              %a{href: "#"}
+                %img.img-responsive{alt: "", src: "assets/sponsor/youtube.png"}/
+    / Sponsor End
+    / Scroll to top
+    %span.totop
+      %a{href: "#"}
+        %i.fa.fa-chevron-up
+    / Footer Start
+    .footer
+      .footer-inner
+        .container
+
+          .copy
+            %p
+              \© Copyright
+              %a{href: "#"} Company Name

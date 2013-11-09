@@ -1,0 +1,6 @@
+<h3>Użytkownicy</h3>
+<p>Użytkownik: <%= @user.name %></p>
+<p>Email: <%= @user.email if @user.email %></p>
+<%= image_tag @user.avatar.url %>
+<%= image_tag @user.avatar.url(:medium) %>
+<%= image_tag @user.avatar.url(:thumb) %>
