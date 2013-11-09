@@ -42,14 +42,22 @@
   $(function(){
     $(".placement").click(function(){
       $("#filter_placement").attr('value', $(this).text().trim())
+      $('.placement').removeClass('btn-success')
+      $(this).addClass('btn-success')
     })
     $(".cash").click(function(){
       $("#filter_cash").attr('value', $(this).text().trim())
+      $('.cash').removeClass('btn-success')
+      $(this).addClass('btn-success')
     })
-        $(".group_type").click(function(){
+    $(".group_type").click(function(){
       $("#filter_group_type").attr('value', $(this).text().trim())
+      $('.group_type').removeClass('btn-success')
+      $(this).addClass('btn-success')
     })
-        $(".time").click(function(){
+    $(".time").click(function(){
       $("#filter_time").attr('value', $(this).text().trim())
+      $('.time').removeClass('btn-success')
+      $(this).addClass('btn-success')
     })
   })

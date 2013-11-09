@@ -17,7 +17,7 @@ Ideacards::Application.configure do
   config.static_cache_control = "public, max-age=2592000"
 
 
-
+  config.assets.paths << "#{Rails.root}/app/assets/fonts"
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
 
