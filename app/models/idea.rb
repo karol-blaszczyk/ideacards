@@ -12,5 +12,6 @@ class Idea < ActiveRecord::Base
   PLACEMENTS = [{value: "DOM", image: ""}, {value: "ZEW.", image: ""}, {value: "INNE", image: ""}]
   CASH = [{value: "FREE", image: ""}, {value: "< 20zł", image: ""}, {value: "> 20zł", image: ""}]
   GROUP = [{value: "1 osoba", image: ""}, {value: "2 osoby", image: ""}, {value: "> 2 osoby", image: ""}]
+  COLORS = ["#432456", "#756483"]
 
 end

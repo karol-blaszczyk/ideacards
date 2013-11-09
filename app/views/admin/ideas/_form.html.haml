@@ -11,6 +11,9 @@
         = f.input :group_type, as: :select, collection: Idea::GROUP.collect{|v| v[:value]}, :selected => "lifetime"
         = f.input :time, as: :select, collection: Idea::TIMES.collect{|v| v[:value]}, :selected => "lifetime"
         = f.input :cash, as: :select, collection: Idea::CASH.collect{|v| v[:value]}, :selected => "lifetime"
+        = f.input :color, as: :select, collection: Idea::COLORS, :selected => "lifetime"
+
+        %div#coll{style: "width: 50px;height:50px;margin: 1em;"}
 
 
 
@@ -36,5 +39,8 @@
         = f.button :submit, idea.persisted? ? :'Uaktualnij' : :'Dodaj', :class => "btn btn-primary"
         -# = link_to :'Wróć', back_path, :class => "btn btn-default " if back_path
 
-
-
+:javascript
+  $('#idea_color').change(function(){
+    $('#coll').css('background',$(this).val())
+  })
+  

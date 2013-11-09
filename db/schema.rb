@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131109155017) do
+ActiveRecord::Schema.define(version: 20131109163631) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 20131109155017) do
     t.string   "slug"
     t.string   "placement"
     t.string   "group_type"
+    t.string   "color"
   end
 
   add_index "ideas", ["category_id"], name: "index_ideas_on_category_id"
