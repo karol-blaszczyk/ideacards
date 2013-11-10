@@ -15,7 +15,6 @@
     .row
       .col-md-3
       .col-md-6
-        %br
         %h1
           %strong= @idea.name
         .hero
@@ -23,7 +22,7 @@
         %br
         = @idea.description.html_safe
       %div.text-center
-        .btn-group
+        .btn-group{style: "margin-top: 2em;"}
           - Idea::TIMES.each do |v|
             - if @idea.time == v[:value]
               .btn.time{style: "background: #{darken_color(@idea.color, 0.8)}; color: white;"}
