@@ -15,10 +15,7 @@
             %h1{style: "padding-top: 150px;"}  VS
           = render 'ideas/idea', idea: ideas.last
         - else
-          %h1.text-center{style: "color: white;"} 
-            PRZY AKTUALNEJ KONFIGURACJI 
-            %br
-            NIE MAMY DLA CIEBIE ŻADNEJ PROPOZYCJI
+          %h1{style: "color: white;"} PRZY AKTUALNEJ KONFIGURACJI NIE MAMY DLA CIEBIE ŻADNEJ PROPOZYCJI
           .text-center
             = link_to root_path do
               = image_tag("zabij_baka.png")
