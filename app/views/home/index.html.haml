@@ -18,24 +18,28 @@
         background-color: #{darken_color(color.last, 0.2)};
       }
     .row
-      %h2.text-center{style: "color:white"} Loerm ipsum
+      %h2.text-center{style: "color:white; margin-bottom: 1em;"} Określ
       %div.text-center
-        .btn-group-vertical
+        .btn-group-vertical{style: "margin: 0 1em;"}
+          %strong{style: "color:white"}  Czas
           - Idea::TIMES.each do |v|
             .btn.time.icon_choose
               .icons{style: "background-position: #{v[:image]}"}
               = v[:value]
-        .btn-group-vertical
+        .btn-group-vertical{style: "margin: 0 1em;"}
+          %strong{style: "color:white"}  Pieniądze
           - Idea::CASH.each do |v|
             .btn.cash.icon_choose
               .icons{style: "background-position: #{v[:image]}"}
               = v[:value]
-        .btn-group-vertical
+        .btn-group-vertical{style: "margin: 0 1em;"}
+          %strong{style: "color:white"}  Osoby
           - Idea::GROUP.each do |v|
             .btn.group_type.icon_choose
               .icons{style: "background-position: #{v[:image]}"}
               = v[:value]
-        .btn-group-vertical
+        .btn-group-vertical{style: "margin: 0 1em;"}
+          %strong{style: "color:white"}  Miejsce
           - Idea::PLACEMENTS.each do |v|
             .btn.placement.icon_choose
               .icons{style: "background-position: #{v[:image]}"}

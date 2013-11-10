@@ -1,18 +1,26 @@
-
 / Recent News Start
-.banner-container{style: "background: #ECF0F1"}
+- ideas = @ideas.shuffle.first(2) 
+- color = Idea::FRONT_COLORS.shuffle.first
+.banner-container{style: "background: #{ideas.count == 2 ? '#ECF0F1' : color.first }"}
   .container
     .row{style: "margin-bottom: 2em;"}
-      %h1.text-center Wybierz jedną kratę
+      - if ideas.count == 2
+        %h1.text-center Wybierz jedną kratę
       %br
       %ul.thumbnails.list-unstyled
         %li.col-md-1
-        - ideas = @ideas.shuffle.first(2) 
         - if ideas.count == 2
           = render 'ideas/idea', idea: ideas.first
           %li.col-md-2.text-center
             %h1{style: "padding-top: 150px;"}  VS
           = render 'ideas/idea', idea: ideas.last
         - else
-          %h1 Nie znalazłem pomysłów spełniających twoje kryteria :(
+          %h1.text-center{style: "color: white;"} 
+            PRZY AKTUALNEJ KONFIGURACJI 
+            %br
+            NIE MAMY DLA CIEBIE ŻADNEJ PROPOZYCJI
+          .text-center
+            = link_to root_path do
+              = image_tag("zabij_baka.png")
+          
         
