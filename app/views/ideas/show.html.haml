@@ -1,4 +1,16 @@
-.banner-container{style: "background: #ECF0F1"}
+:css
+  .btn.category-choose{
+   font-size: 1.4em;
+   margin-top: 2em;
+   border-color: #{darken_color(@idea.color, 0.8)};
+  background-color: #{darken_color(@idea.color, 0.8)};
+  color: white;
+  margin-bottom: 2em;
+  }
+  .btn.category-choose:hover{
+    background-color: #{darken_color(@idea.color, 0.2)};
+  }
+.banner-container{style: "background: #{@idea.color}; color: white;"}
   .container
     .row
       .col-md-3
@@ -10,14 +22,31 @@
           %img.img-responsive{alt: "", src: "#{@idea.picture}"}/
         %br
         = @idea.description.html_safe
-        .hero-btn.text-center
-          = link_to root_path, class: "btn btn-default btn-lg" do
+      %div.text-center
+        .btn-group
+          - Idea::TIMES.each do |v|
+            - if @idea.time == v[:value]
+              .btn.time{style: "background: #{darken_color(@idea.color, 0.8)}; color: white;"}
+                .icons{style: "background-position: #{v[:image]}"}
+                = v[:value]
+          - Idea::CASH.each do |v|
+            - if @idea.cash == v[:value]
+              .btn.cash{style: "background: #{darken_color(@idea.color, 0.8)}; color: white;"}
+                .icons{style: "background-position: #{v[:image]}"}
+                = v[:value]
+          - Idea::GROUP.each do |v|
+            - if @idea.group_type == v[:value]
+              .btn.group_type{style: "background: #{darken_color(@idea.color, 0.8)}; color: white;"}
+                .icons{style: "background-position: #{v[:image]}"}
+                = v[:value]
+          - Idea::PLACEMENTS.each do |v|
+            - if @idea.placement == v[:value]
+              .btn.placement{style: "background: #{darken_color(@idea.color, 0.8)}; color: white;"}
+                .icons{style: "background-position: #{v[:image]}"}
+                = v[:value]
+        .hero-btn.text-center{style: "margin-top: 2em;"}
+          = link_to root_path, class: "btn btn-lg category-choose" do
             Pomóż mi ponownie
-        .gfaf
-          =link_to finished_idea_path(@idea) do
-            .icons
-            %i.fa.fa-heart
-          =link_to "Fav", favorite_idea_path(@idea)
 / .hero
 /   .container
 /     .hero-inner

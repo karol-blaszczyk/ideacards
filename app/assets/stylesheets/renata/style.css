@@ -225,14 +225,14 @@ fotm textarea{
 
 .header{
 	padding: 8px 0 10px 0;
-	background: #2C3E50;
+	background: #16a085;
 	display: none;
 	position: relative;
 	z-index: 2000;
 }
 
 .header .navigation .menu{
-	box-shadow: 0px 0px 10px #333;
+	/*box-shadow: 0px 0px 10px #333;*/
 }
 
 .header .navigation .menu span{
@@ -306,7 +306,7 @@ fotm textarea{
 	text-align: center;
 	font-size: 14px;
 	color: #fff;
-	background: #2C3E50;
+	background: #1abc9c;
 	text-decoration: none !important;
 }
 
@@ -324,17 +324,17 @@ fotm textarea{
 /* Head  LOGO LOGO-TEXT CSS */ 
 
 .head{
-	background: #34495e;
-	border-top: 3px solid #2C3E50;
+	background: #ecf0f1;
+	border-top: 3px solid #1abc9c;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-	padding: 8px 0;
 	width: 100%;
 	position: relative;
 	z-index: 1000;
 }
 
 .head .logo{
-	margin-top: 7px;
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
 .head .logo img{

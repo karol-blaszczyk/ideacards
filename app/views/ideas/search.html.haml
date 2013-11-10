@@ -2,14 +2,15 @@
 / Recent News Start
 .banner-container{style: "background: #ECF0F1"}
   .container
-    .row
+    .row{style: "margin-bottom: 2em;"}
+      %h1.text-center Wybierz jedną kratę
       %br
       %ul.thumbnails.list-unstyled
         %li.col-md-1
         - ideas = @ideas.shuffle.first(2) 
         - if ideas.count == 2
           = render 'ideas/idea', idea: ideas.first
-          %li.col-md-1.text-center
+          %li.col-md-2.text-center
             %h1{style: "padding-top: 150px;"}  VS
           = render 'ideas/idea', idea: ideas.last
         - else

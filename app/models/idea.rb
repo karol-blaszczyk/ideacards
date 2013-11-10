@@ -21,6 +21,6 @@ class Idea < ActiveRecord::Base
 
   FRONT_COLORS = [["#1ABC9C","#16A085"],["#F1C40F","#F39C12"],
                   ["#2ECC71","#27AE60"],["#E67E22","#D35400"],
-                  ["#3498DB","#3498DB"],["#9B59B6","#8E44AD"]]
+                  ["#3498DB","#2980B9"],["#9B59B6","#8E44AD"]]
 
 end

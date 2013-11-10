@@ -7,6 +7,16 @@
       .btn.icon_choose:hover, .btn.icon_choose.active{
         background-color: #{color.last};
       }
+      .btn.category-choose{
+       font-size: 1.4em;
+       margin-top: 2em;
+       border-color: #{color.first};
+        background-color: #{color.last};
+        margin-bottom: 2em;
+      }
+      .btn.category-choose:hover{
+        background-color: #{darken_color(color.last, 0.2)};
+      }
     .row
       %h2.text-center{style: "color:white"} Loerm ipsum
       %div.text-center
@@ -37,7 +47,7 @@
         = f.input :cash, as: :hidden, input_html: { value:  "" }
         = f.input :group_type, as: :hidden, input_html: {value:  ""}
         = f.input :time, as: :hidden, input_html: {value:  ""}
-        = f.button :submit, "POMÓŻ MI WYBRAĆ", :class => 'btn btn-primary btn-lg category', data: { disable_with: "Szukam..."}          
+        = f.button :submit, "POMÓŻ MI WYBRAĆ", :class => 'btn btn-primary btn-lg category-choose', data: { disable_with: "Szukam..."}          
         -# .btn.btn-primary= category.name
 
   .clearfix

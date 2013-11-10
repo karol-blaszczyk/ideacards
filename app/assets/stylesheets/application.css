@@ -27,11 +27,17 @@
 height: 100px;
 text-align: center;
 color: white !important;
+  -webkit-transition: all .3s;  
+  -moz-transition: all .3s;  
+  transition: all .3s; 
 }
 
 .btn.icon_choose:hover, .btn.icon_choose.active{
 	border-radius: 50%!important;
 	background-color: red;
+	  -webkit-transition: all .3s;  
+  -moz-transition: all .3s;  
+  transition: all .3s; 
 }
 
 .btn.icon_choose > .icons{
