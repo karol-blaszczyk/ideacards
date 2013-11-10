@@ -5,12 +5,12 @@ CKEDITOR.editorConfig = (config) ->
   # config.uiColor = '#e7876c'
   config.skin = 'kama'
   config.contentsCss = 'assets/application.css';
-  config.removePlugins = 'source,elementspath,save';
+  config.removePlugins = 'elementspath,save';
   config.toolbar_Pure = [
-    # { name: 'document',    items: [ 'Save','NewPage','DocProps','Preview','Print','-','Templates' ] },
+    # { name: 'document',    items: [ 'Save','NewPage','DocProps','Preview','Print','-','Templates', ] },
     { name: 'clipboard',   items: [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ] },
     # { name: 'editing',     items: [ 'Find','Replace','-','SelectAll'] },
-    { name: 'tools',       items: [ 'Maximize', 'ShowBlocks' ] }
+    { name: 'tools',       items: [ 'Maximize', 'ShowBlocks', "Source" ] }
     { name: 'basicstyles', items: [ 'Bold','Italic','Underline','Strike','Subscript','Superscript','-','RemoveFormat' ] },
     { name: 'paragraph',   items: [ 'NumberedList','BulletedList','-','Outdent','Indent','-','Blockquote','CreateDiv','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock','-','BidiLtr','BidiRtl' ] },
     # { name: 'links',       items: [ 'Link','Unlink'] },
