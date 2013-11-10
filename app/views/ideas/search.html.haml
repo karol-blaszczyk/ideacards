@@ -1,8 +1,17 @@
 
 / Recent News Start
-.recent-news
+.banner-container{style: "background: #ECF0F1"}
   .container
-    %ul.thumbnails.list-unstyled
-      - @ideas.each do |idea| 
-        = render 'ideas/idea', idea: idea
+    .row
+      %br
+      %ul.thumbnails.list-unstyled
+        %li.col-md-1
+        - ideas = @ideas.shuffle.first(2) 
+        - if ideas.count == 2
+          = render 'ideas/idea', idea: ideas.first
+          %li.col-md-1.text-center
+            %h1{style: "padding-top: 150px;"}  VS
+          = render 'ideas/idea', idea: ideas.last
+        - else
+          %h1 Nie znalazłem pomysłów spełniających twoje kryteria :(
         

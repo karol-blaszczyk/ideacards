@@ -225,7 +225,7 @@ fotm textarea{
 
 .header{
 	padding: 8px 0 10px 0;
-	background: #444;
+	background: #2C3E50;
 	display: none;
 	position: relative;
 	z-index: 2000;
@@ -306,7 +306,7 @@ fotm textarea{
 	text-align: center;
 	font-size: 14px;
 	color: #fff;
-	background: #F76753;
+	background: #2C3E50;
 	text-decoration: none !important;
 }
 
@@ -325,7 +325,7 @@ fotm textarea{
 
 .head{
 	background: #34495e;
-	border-top: 3px solid #F76753;
+	border-top: 3px solid #2C3E50;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 	padding: 8px 0;
 	width: 100%;
@@ -421,9 +421,8 @@ fotm textarea{
 .banner-container {
 	width:100% !important;
 	background: #f5f5f5;
-	height: 650px;
+	padding: 2em;
 	top: 0;
-	padding:0;
 	position:relative;
 	overflow: hidden !important;
 }
@@ -2228,7 +2227,7 @@ div.ppt {
 
 .footer{
 	padding: 0 30px 30px 30px;
-	background: #000 url('/assets/stressed_linen.png') repeat;
+	background: #2C3E50;
 }
 
 .footer .footer-head{
@@ -2306,7 +2305,7 @@ div.ppt {
 .footer .footer-widget .footer-rp .item h3 a,
 .footer .copy p a,
 .footer .copy a{
-	color: #aaa;
+	color: #f5f5f5;
 }
 
 .footer .footer-widget ul li a:hover,
@@ -2355,8 +2354,7 @@ div.ppt {
 	margin-top: 15px;
 	padding-top: 25px;
 	text-align: center;
-	color: #ccc;
-	border-top: 1px solid #222;
+	color: #f5f5f5;
 }
 
 /* Responsive CSS */

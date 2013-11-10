@@ -6,7 +6,8 @@ Ideacards::Application.routes.draw do
    resources :ideas, only: [:index, :show], path: 'pomysly' do
       get :search, on: :collection, path: 'szukaj'
       post :search, on: :collection, path: 'szukaj'
+      get :favorite,       on: :member
+      get :finished,     on: :member
    end
-
 
 end

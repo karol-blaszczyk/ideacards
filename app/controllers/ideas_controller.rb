@@ -20,4 +20,23 @@ class IdeasController < ApplicationController
 
 	  respond_with @ideas = ideas
 	end
+
+
+  def favorite
+  	 if current_user
+      Idea.friendly.find(params[:id]).vote :voter => current_user, :vote => 'favorite'
+      redirect_to :back
+    else
+      redirect_to :back, :alert => "Musisz być zalogowany aby oddać głos" unless current_user
+    end
+  end
+
+  def finished
+  	 if current_user
+      Idea.friendly.find(params[:id]).vote :voter => current_user, :vote => 'finished'
+      redirect_to :back
+    else
+      redirect_to :back, :alert => "Musisz być zalogowany aby oddać głos" unless current_user
+    end
+  end
 end

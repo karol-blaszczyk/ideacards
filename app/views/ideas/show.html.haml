@@ -1,19 +1,39 @@
-.hero
+.banner-container{style: "background: #ECF0F1"}
   .container
-    .hero-inner
-      .hero-head.text-center
-        / Hero heading
-        %h1.head-h
+    .row
+      .col-md-3
+      .col-md-6
+        %br
+        %h1
           %strong= @idea.name
-      .row
-        .col-md-6.col-sm-6
-          / Hero head paragraph
-          %p.text-right
-            %img.img-responsive{alt: "", src: "#{@idea.picture.url(:medium)}"}/
-          .hero-btn
-            = @idea.category.name
-        .col-md-6.col-sm-6
-          = @idea.description.html_safe
-          .hero-btn
-            %a.btn.btn-info{href: "#"} Read More..
-    %hr/
+        .hero
+          %img.img-responsive{alt: "", src: "#{@idea.picture}"}/
+        %br
+        = @idea.description.html_safe
+        .hero-btn.text-center
+          = link_to root_path, class: "btn btn-default btn-lg" do
+            Pomóż mi ponownie
+        .gfaf
+          =link_to finished_idea_path(@idea) do
+            .icons
+            %i.fa.fa-heart
+          =link_to "Fav", favorite_idea_path(@idea)
+/ .hero
+/   .container
+/     .hero-inner
+/       .hero-head.text-center
+/         / Hero heading
+/         %h1.head-h
+/           %strong= @idea.name
+/       .row
+/         .col-md-6.col-sm-6
+/           / Hero head paragraph
+/           %p.text-right
+/             %img.img-responsive{alt: "", src: "#{@idea.picture.url(:medium)}"}/
+/           .hero-btn
+/             = @idea.category.name
+/         .col-md-6.col-sm-6
+/           = @idea.description.html_safe
+/           .hero-btn
+/             %a.btn.btn-info{href: "#"} Read More..
+/     %hr/

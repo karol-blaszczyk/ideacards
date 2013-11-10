@@ -32,7 +32,7 @@ gem 'paperclip', '~> 3.0' # file's attachments
 gem 'sass-rails',   '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
-
+gem 'acts_as_votable', '~> 0.7.1'
 gem 'capistrano', '2.15.5'
 
 group :production do

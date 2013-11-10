@@ -1,51 +1,10 @@
 
 / Recent News Start
-.recent-news
+.banner-container{style: "background: #ECF0F1"}
   .container
     .row
-      - @ideas.each do |idea| 
-        = render 'ideas/idea', idea: idea
-            / %li
-            /   %img.img-responsive{alt: "", src: "assets/s2.jpg"}/
-            /   .carousel_caption
-            /     %h4
-            /       %a{href: "#"} Maecenas est odio
-            /     %p Lorem ipsum dolor sit amet
-            / %li
-            /   %img.img-responsive{alt: "", src: "assets/s3.jpg"}/
-            /   .carousel_caption
-            /     %h4
-            /       %a{href: "#"} Proin accumsan
-            /     %p Lorem ipsum dolor sit amet
-            / %li
-            /   %img.img-responsive{alt: "", src: "assets/s4.jpg"}/
-            /   .carousel_caption
-            /     %h4
-            /       %a{href: "#"} Lorem ipsum
-            /     %p Lorem ipsum dolor sit amet
-            / %li
-            /   %img.img-responsive{alt: "", src: "assets/s5.jpg"}/
-            /   .carousel_caption
-            /     %h4
-            /       %a{href: "#"} Praesent massa
-            /     %p Lorem ipsum dolor sit amet
-            / %li
-            /   %img.img-responsive{alt: "", src: "assets/s6.jpg"}/
-            /   .carousel_caption
-            /     %h4
-            /       %a{href: "#"} Praesent pretium
-            /     %p Lorem ipsum dolor sit amet
-            / %li
-            /   %img.img-responsive{alt: "", src: "assets/s7.jpg"}/
-            /   .carousel_caption
-            /     %h4
-            /       %a{href: "#"} Donec quis
-            /     %p Lorem ipsum dolor sit amet
-            / %li
-            /   %img.img-responsive{alt: "", src: "assets/s8.jpg"}/
-            /   .carousel_caption
-            /     %h4
-            /       %a{href: "#"} Proin id elit
-            /     %p Lorem ipsum dolor sit amet
-          .clearfix
-        / CarouFredSel Ends
+      %br
+      %ul.thumbnails.list-unstyled
+        - @ideas.each do |idea| 
+          = render 'ideas/idea', idea: idea
+          
