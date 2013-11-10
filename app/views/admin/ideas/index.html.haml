@@ -10,10 +10,10 @@
         %th
     %tbody
       - @ideas.each do |idea|
-        %tr
-          %td= link_to idea.name, admin_idea_path(idea)
-          %td= image_tag idea.picture.url(:thumb), :class => "img-rounded", :style => "max-width: 100px;"
-          %td= idea.description
+        %tr{style: "background: #{idea.color}; color: white;"}
+          %td= link_to idea.name, admin_idea_path(idea), style: "color: white;"
+          %td= image_tag idea.picture.url(:thumb), :class => "img-rounded", :style => "max-width: 100px;color: white;"
+          %td= short_body idea
 
           %td
             = link_to "Usuń", admin_idea_path(idea), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-danger' 
