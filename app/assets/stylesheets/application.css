@@ -15,13 +15,3 @@
    *= require ./select
  */
 
-@font-face {
-  font-family: 'kelson';
-  src: url('/assets/Kelson_Sans_Regular.otf');
-  font-weight: normal;
-  font-style: normal;
-}
-
-body{
- font-family: 'kelson', 'Open Sans', sans-serif!important;
-}

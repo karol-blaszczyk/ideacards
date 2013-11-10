@@ -3,36 +3,37 @@
 .banner-container
   .container
     .row
+      %h2.text-center Loerm ipsum
       .col-md-6
-        .btn-group.pull-right.btn-group-justified
+        .btn-group-vertical.pull-right
           - Idea::TIMES.each do |v|
             .btn.btn-primary.btn-lg.time
               = v[:value]
       .col-md-6
-        .btn-group.btn-group-justified
+        .btn-group-vertical
           - Idea::CASH.each do |v|
             .btn.btn-primary.btn-lg.cash
               = v[:value]
 
     .row{style: "margin-top: 20px;"}
       .col-md-6
-        .btn-group.pull-right.btn-group-justified
+        .btn-group-vertical.pull-right
           - Idea::GROUP.each do |v|
             .btn.btn-primary.btn-lg.group_type
               = v[:value]
       .col-md-6
-        .btn-group.btn-group-justified
+        .btn-group-vertical
           - Idea::PLACEMENTS.each do |v|
             .btn.btn-primary.btn-lg.placement
               = v[:value]
 
-    .row
+    .row.text-center
       = simple_form_for :filter, :url => search_ideas_path do |f|
         = f.input :placement, as: :hidden, input_html: { value:  "" }
         = f.input :cash, as: :hidden, input_html: { value:  "" }
         = f.input :group_type, as: :hidden, input_html: {value:  ""}
         = f.input :time, as: :hidden, input_html: {value:  ""}
-        = f.button :submit, "LOSUJ", :class => 'btn btn-primary search_videos category', data: { disable_with: "Szukam..."}          
+        = f.button :submit, "POMÓŻ MI WYBRAĆ", :class => 'btn btn-primary btn-lg category', data: { disable_with: "Szukam..."}          
         -# .btn.btn-primary= category.name
 
   .clearfix

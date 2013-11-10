@@ -3,36 +3,8 @@
 .recent-news
   .container
     .row
-      .col-md-3
-        .block
-          %h2.heading
-            %i.fa.fa-desktop.orange
-            Pomysły
-        %p
-          Variations passages of Lorem Ipsum oel available, but the majority have suffer
-          %span.green alteration
-          in some form, by injected oye humour, or randomise words which don't look even highly
-          = succeed "." do
-            %span.lblue believable
-      .col-md-9
-        / CarouFredSel Starts
-        .my_carousel
-          %ul#carousel_container
-            - @ideas.each do |idea| 
-              %li
-                / Carousel Image
-                %img.img-responsive{alt: "", src: "#{idea.picture.url(:medium)}"}/
-                / Carosule Caption
-                .carousel_caption
-                  / Caption Heading & Paragraph
-                  %h4
-                    = link_to idea do
-                      = idea.name
-                  %p= shorter_body idea 
-                  %p= idea.category.name
-                  %p= idea.time
-                  %p= idea.placement
-                  %p= idea.cash
+      - @ideas.each do |idea| 
+        = render 'ideas/idea', idea: idea
             / %li
             /   %img.img-responsive{alt: "", src: "assets/s2.jpg"}/
             /   .carousel_caption

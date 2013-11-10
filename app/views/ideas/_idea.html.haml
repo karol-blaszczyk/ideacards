@@ -1,0 +1,23 @@
+/ %li
+/   / Carousel Image
+/   %img.img-responsive{alt: "", src: "#{idea.picture.url(:medium)}"}/
+/   / Carosule Caption
+/   .carousel_caption
+/     / Caption Heading & Paragraph
+/     %h4
+/       = link_to idea do
+/         = idea.name
+/     %p= shorter_body idea 
+/     %p= idea.category.name
+/     %p= idea.time
+/     %p= idea.placement
+/     %p= idea.cash
+
+%li.col-md-4
+  .thumbnail{style: "padding: 0;background: #{idea.color}; color:white;"}
+    %div
+      %img{alt: "#{idea.name}", src: "#{idea.picture.url(:medium)}", style: "width: 100%;max-height: 232px;"}/
+    .caption.text-center
+      %h2.text-center{style: "color: white;"}= idea.name
+      = link_to idea, class: "btn btn-primary btn-lg", style: "background: #{darken_color(idea.color, 0.2)}; border-color: #{lighten_color(idea.color, 0.1)}" do
+        Wybieram
